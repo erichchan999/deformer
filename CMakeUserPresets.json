@@ -1,0 +1,18 @@
+{
+    "version": 8,
+    "configurePresets": [
+        {
+            "name": "release",
+            "inherits": "release-profile-base",
+            "cacheVariables": {
+                "CMAKE_PREFIX_PATH": "/path/to/your/usd/build"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "release",
+            "configurePreset": "release"
+        }
+    ]
+}

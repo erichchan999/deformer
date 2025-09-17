@@ -1,0 +1,18 @@
+# Build directories
+/build*
+
+# Developer scripts
+/*.sh
+
+# clangd
+/compile_commands.json
+/.cache*
+
+# claude files
+/.claude*
+
+# vscode files
+/.vscode*
+
+# tmp trace results
+/trace-results*

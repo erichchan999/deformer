@@ -1,0 +1,40 @@
+{
+  "version": 8,
+  "configurePresets": [
+    {
+      "name": "debug-base",
+      "hidden": true,
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "OUTPUT_USD_PATH": "${sourceDir}/build/${presetName}/output.usd",
+        "INPUT_USD_PATH": "${sourceDir}/geometry/sphere_dense.usd"
+      }
+    },
+    {
+      "name": "release-base",
+      "hidden": true,
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "OUTPUT_USD_PATH": "${sourceDir}/build/${presetName}/output.usd",
+        "INPUT_USD_PATH": "${sourceDir}/geometry/sphere_dense.usd",
+        "TRACY_ENABLE": "OFF"
+      }
+    },
+    {
+      "name": "release-profile-base",
+      "hidden": true,
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "OUTPUT_USD_PATH": "${sourceDir}/build/${presetName}/output.usd",
+        "INPUT_USD_PATH": "${sourceDir}/geometry/sphere_dense.usd",
+        "TRACY_NO_EXIT": "ON"
+      }
+    }
+  ]
+}
